@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Multi Fun!</title>
+    <style>
+        /* .content {
+            color: rebeccapurple;
+        }
+
+        .content.accent {
+            color: lime;
+        }
+
+        h3.accent {
+            color: aqua;
+        } */
+
+        h1,
+         p, 
+        .accent{
+            color: firebrick;
+        }
+
+        .groceries li a {
+            color: orangered;
+        }
+
+        .sports li {
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ice Creamery</h1>
+        <h2 class="accent content">I Scream You Scream, the Best Ice Cream in Town</h2>
+    </header>
+    <section>
+        <h3 class="accent">About</h3>
+        <p class="accent content">Ever since I was a youngster I loved making my own ice cream!</p>
+        <p class="content">I loved making my own ice creams!</p>
+    </section>
+    
+    <section>
+        <!-- parent -->
+        <ul class="groceries">
+            <!-- children -->
+                <li>Milk</li>
+                <li>Eggs (on sale at 
+                    <!-- grandchildren -->
+                    <a href="#">No Frills</a>)</li>
+                <li>Bread</li>
+                <li>Red Bull (Please print this <a href="#">Coupon</a>)</li>
+            </ul>
+            
+            <ul class="sports">
+                <li>Soccer</li>
+                <li>Basketball</li>
+                <li>Hockey</li>
+                <li>Irish Bog Snorkeling (read more <a href="#">here</a>)</li>
+            </ul>
+    </section>   
+</body>
+</html>

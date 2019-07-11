@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS CSI</title>
+		<style>
+
+			/* Some base styling you don't need to worry about are up here. */
+			html {
+				font-family: sans-serif;
+			}
+		
+			header,
+			section {
+				padding: 100px;
+				background-color: darkseagreen;
+			}
+
+			footer {
+				padding: 10px;
+				background-color: black;
+				text-align: center;
+			}
+
+			/* Cascade, Specificity and Inheritance Exercise */
+
+			/* There are some styles in this stylesheet that are not applying to the page properly. Go through each on and see if you can fix it. */
+
+			/* done 1. Why is this h1 not applying the color of "darkgreen"? Rewrite one or more selectors so that it applies.*/
+
+			/* done 2. Why is the Different Plants section not applying the background-color of "mediumseagreen"? Rewrite the selector so that it applies. HINT: compare the HTML to the CSS.*/
+
+			/* done 3. The flower decorations in the headings should be pink. Without deleting any selectors, rewrite one or more selectors to apply the pink colour to the flowers.*/
+
+			/* done 4. The styles for elements with the class of fact are not applying. Rewrite the selectors so that they apply. */
+
+			/* done 5. Right now our h3's feel too small, and our h2's feel too big. Changing only one selector, change the size of the h2's to 1.5rem, and the h3's the 2rem. */
+
+			/* done 6. Right now the spans inside of the elements with a class of fact is not applying its given style. Rewrite the selector so that the style applies. */
+
+			/* done 7. There is a paragraph tag in our footer, but we can't see it on the page! Using inheritance, change the color of the text without directly targeting the p tag.*/
+
+			/* done 8a. The anchor tag in the footer is looking pretty 90's with its default styling. Start by using the rule from question 7 and add a selector to it that changes just the colour of the anchor tag to white.*/
+				
+			/* done 8b. Now write a new selector that changes underline and weight of the anchor tag in the footer. */
+
+			/* done BONUS Write a selector that applies a background-color of "dimgrey" to all of the p elements, without targeting the p elements directly.*/
+
+		
+			h1 {
+				color: darkgreen;
+				font-size: 3rem;
+			}
+		
+			h2,
+			h3 {
+				color: white;
+			}
+		
+			h2,
+			h3 {
+				font-size: 1.5rem;
+			}
+
+			h2 {
+				font-size: 2rem;
+			}
+
+			 .different {
+				background-color: mediumseagreen;
+			}
+		
+			span.flower {
+				color: gold;
+			}
+		
+			span.flower{
+				color: lightpink;
+			}
+		
+			.fact {
+				background-color: yellowgreen;
+				padding: 10px;
+				color: black;
+			}
+
+			.fact span {
+				font-weight: bold;
+			}
+
+			body footer {
+				color: white;
+			}
+
+			footer a {
+				color: white;
+			}
+
+			footer a {
+				text-decoration: none;
+				font-weight: bold;	
+			}
+
+			header, section {
+				color: dimgrey;
+			}
+
+    </style>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <!-- &#x2723 is a unicode emoji symbol -->
+        <h1>
+            <span class="flower">&#x2723</span>
+            Plants
+            <span class="flower">&#x2723</span>
+        </h1>
+        <h2>Give you fresh air all day</h2>
+        <p class="fact">I own a lot of plants, they are a joy to the world we live on.</p>
+    </header><!--header end-->
+
+    <!-- different section -->
+    <section class="different">
+        <h3>
+            <span class="flower">&#x2723</span>
+            Health Benefits
+            <span class="flower">&#x2723</span>
+        </h3>
+        <p>When you take care of plants well, they are just so happy and blooming and beautiful and what else could you ask for you know?</p>
+        <p>Some of them regulate air, some of them are toxic to cats, they are each their own special life force and they deserve to be loved! Always water your plant!</p>
+    </section><!--different section end-->
+
+    <!-- section -->
+    <section>
+        <h3>
+            <span class="flower">&#x2723</span>
+            Different Plants
+            <span class="flower">&#x2723</span>
+        </h3>
+        <p class="fact">A sunflower is one large flower, but its head actually is composed of hundreds of tiny flowers called <span>florets</span>!</p>
+        <p class="fact">Apparently, 85% of plant life is found in the ocean. <span>Craziness!</span></p>
+        <p>Also I just love flowers and plants. They are the best.</p>
+		</section>
+		<!--section end-->
+		
+		<!-- footer -->
+		<footer>
+			<p>To learn more about plants, check out <a href="https://www.instagram.com/wilfredwarrior/?hl=en">this link</a></p>
+		</footer>
+		<!-- footer end -->
+
+</body>
+</html>
