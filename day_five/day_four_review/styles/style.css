@@ -1,0 +1,32 @@
+html {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body,
+h1,
+p {
+    margin: 0;
+}
+
+header {
+    background:  linear-gradient(rgba(255, 0, 0, 0.5),
+     rgba( 0, 255, 0, 0.4)), url(../assets/whistler.jpg);
+    height: 100vh;
+}
+
+div {
+   width: 100px;
+    
+    /* height: 200px;
+    width: 200px;  */
+    border: 8px dotted gold;
+    background: rebeccapurple;
+    margin: 5px 0;
+    box-shadow: 3px 5px 10px black;
+}
