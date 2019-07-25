@@ -1,0 +1,167 @@
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+/* stripping styles */
+body,
+p,
+ul,
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 90%;
+}
+
+section {
+    margin: 100px 0;
+}
+
+h2,
+h4 {
+    font-size: 30px;
+    color: rgb(236, 188, 27);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+h3 {
+    font-family: serif;
+    font-size: 25px;
+}
+
+header {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: #60b1ca;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* Flex II Exercises */
+/*
+    There are 3 TO DOs in the current file. Please open up the answer key for reference in the browser, and refer back to the notes!
+    Feel free to write additional CSS selectors to create the desired effects, some selectors already exist with a few base styles.
+ */
+
+/* TO DO */
+/*
+    1. Add a height of 200px on to the h1.
+
+    2. Utilize flex-box properties to make the span in the h1 higher than the rest of the content in the h1, look to the answer key for reference.
+ */
+h1 {
+    font-size: 65px;
+    font-weight: 300;
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 200px;
+}
+
+h1 span {
+    color: #FFD649;
+    font-weight: normal;
+    align-self: flex-start;
+}
+
+/* TO DO */
+/*
+    1. Allow for the ".project-pic" and ".project-wording" to sit horizontally next to each other.
+
+    2. Give both ".project-pic" and ".project-wording" a flex-basis of 50%.
+
+    3. Add flex properties to allow ".project-wording" to shrink by a factor of 1 as well as grow by a factor of 1. 
+    
+    4. Add flex properties to allow ".project-pic" to shrink by a factor of 0, as well as grow by a factor of 1.
+
+    5. Add the correct property that will allow ".project-pic" and ".project-wording" to stack on top of each other when ".project-pic" reaches 300px in width. Resize the answer key to see this behaviour in action.
+
+    6. Utilize flex order to make every second ".project-wording" appear both to the left in the section at your browser's full width and on the "top" when you shrink your browser. There exists a class in the HTML for this purpose.
+ */
+
+.sub-projects {
+    border: 5px solid #60b1ca;
+    padding: 15px;
+    margin: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.project-pic {
+    height: 300px;
+    min-width: 300px;
+    flex: 1 0 50%;
+}
+
+.project-wording {
+    padding: 25px;
+    flex: 1 1 50%;
+}
+
+.evenProject .project-wording {
+    order: -1;
+}
+/* TO DO */
+/*
+    1. Utilize flex shorthands to create a 3 column look seen in the answer key. Give all of the children items in the footer a flex-basis of auto, along with a grow factor of 1 and a shrink factor of 0, as well as giving text-aligning the items to the center.
+
+    2. Allow for the h4 in the footer align to the bottom of the footer using align-self.
+
+    3. Give ".middle-footer" in the footer a flex-basis of 200px.
+ */
+footer {
+    background-color: #60b1ca;
+    height: 150px;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer ul,
+footer .middle-footer,
+footer h4 {
+    text-align: center;
+    flex: 1 0 auto;
+}
+
+footer .middle-footer {
+    flex-basis: 200px;
+}
+
+footer h4 {
+    align-self: flex-end;
+}
+

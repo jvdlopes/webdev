@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flexbox ||</title>
+    <style>
+        /* html {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        } */
+
+        section {
+            display: flex;
+            flex-direction: row;
+            border: 1px solid black;
+            width: 1000px;
+        }
+
+
+        div {
+            box-sizing: border-box;
+            background: green;
+            border: 2px solid black;
+            color: white;
+            font-size: 40px;
+            padding: 20px;
+            text-align: center;
+            flex-basis: 600px;
+        }
+
+        .third {
+            /* flex-shrink: 0; */
+        }
+
+        .first {
+            /* flex-shrink: 0; */
+        }
+
+        .fourth {
+            /* flex-shrink: 0; */
+        }
+
+        .second {
+            flex-grow: 2;
+            flex-shrink: 1;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section>
+        <div class="first">1</div>
+        <div class="second">2</div>
+        <div class="third">3</div>
+        <div class="fourth">4</div>
+    </section>
+</body>
+
+</html>
