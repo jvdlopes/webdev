@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pseudo Classes</title>
+    <style>
+    a {
+        text-decoration: none;
+        color: black;
+        font-size: 35px;
+    }
+    
+    .first:hover,
+    .first:focus {
+        color: orchid;
+    }
+    .second:hover, 
+    .second:focus {
+        outline: 1px solid orangered;
+    }
+
+    .third:active,
+    .third:hover,
+    .third:focus {
+        border: 2px dotted rosybrown;
+    }
+    </style>
+</head>
+<body>
+    <a href="#" class="first">First</a>
+    <a href="#" class="second">Second</a>
+    <a href="#" class="third">Third</a>
+</body>
+</html>
