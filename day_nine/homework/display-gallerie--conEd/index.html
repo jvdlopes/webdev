@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallerie</title>
+    <!-- load in google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Playfair+Display:700" rel="stylesheet">
+    <!-- load in fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!-- styles -->
+    <style>
+        html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+        
+        .clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+        
+        html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+        
+        *, *:before, *:after {box-sizing: inherit}
+        
+        .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+        body,
+        h1,
+        h2,
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Display and Positioning */
+        /*
+            There are a few points on this page that need display and positioning to help them look and feel like the answer key.
+
+            1. Elements in the header positioned properly
+            2. The squiggly and cross deco in the header to be behind the text and border
+            3. Social icons fixed on the side of the screen
+            4. Position blue arrow to social icons on hover
+            5. Overlay on hover over each image item
+
+            Open up indexANSWER.html to see the desired behaviour, and scroll down to the specific elements in the CSS to add the CSS needed.
+        */
+
+        body {
+            color: white;
+            background: rgb(10,58,99);
+            background: linear-gradient(0deg, rgba(10,58,99,1) 0%, rgba(33,10,69,1) 100%);
+            background-size: cover;
+            font-family: 'Josefin Sans', sans-serif;
+            min-height: 100vh;
+        }
+
+        .wrapper {
+            max-width: 800px;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 65px;
+        }
+
+        h2 {
+            font-size: 30px;
+            text-transform: lowercase;
+        }
+
+        p {
+            font-size: 30px;
+        }
+
+        li {
+            position: relative;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        a:hover,
+        a:focus {
+            color: #83c6ff;
+        }
+
+        /* TODO */
+        /* Position blue arrow to social icons on hover */
+        /* HINT: Elements are anchored to the li (position relative parent) */
+        a:hover::before,
+        a:focus::before {
+            content: url("./assets/arrow.svg");
+            width: 25px;
+            transform: rotate(180deg);
+            position: absolute;
+            top: 2px;
+            left: -35px;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            height: 100%;
+        }
+
+        header {
+            margin: 100px 0;
+        }
+
+        /* TODO */
+        /* Elements in the header positioned properly */
+        /*
+            Elements to position in .header-text:
+            1. h2
+            2. squiggle
+            3. cross
+        */
+        .header-text {
+            border: 5px solid white;
+            width: 350px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+        }
+
+        .header-text h2 {
+            color: black;
+            background-color: white;
+            padding: 10px 20px;
+            position: absolute;
+            top: -25px;
+            left: -30px;
+        }
+
+        /* TODO */
+        /* The squiggle and cross deco in the header to be behind the text and border */
+        .header-text::before {
+            content: url("./assets/squiggle.svg");
+            width: 85px;
+            position: absolute;
+            bottom: -20px;
+            left: -50px;
+            z-index: -10;
+        }
+
+        .header-text::after {
+            content: url("./assets/cross.svg");
+            width: 55px;
+            position: absolute;
+            top: -30px;
+            right: 10px;
+            z-index: -10;
+        }
+
+        /* TODO */
+        /* Social icons fixed on the side of the screen */
+        aside {
+            position: fixed;
+            right: 30px;
+            top: 20px;
+        }
+
+        aside i {
+            font-size: 30px;
+            margin: 10px 0;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* TODO */
+        /* Overlay on hover over each image item */
+        /*
+            Scroll down to the HTML to check out the markup for each gallery item before starting the overlay effect.
+
+            HINT: The div with a class of overlay covers the entire gallery-item.
+            HINT: Overlay appears on hover, a transition is needed.
+        */
+        .gallery-item {
+            width: calc(100% / 2 - 30px);
+            margin: 0 15px 30px;
+            border: 5px solid white;
+            padding: 0;
+            position: relative;
+        }
+
+        .overlay {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 35%;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        /* Write a selector here for the on hover effect */
+        .gallery-item:hover .overlay {
+            opacity: 0.6;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- wrapper -->
+    <div class="wrapper">
+        <!-- header -->
+        <header>
+            <div class="header-text">
+                <h1>Gallerie</h1>
+                <h2>Take a gander @</h2>
+            </div>
+        </header><!--end of header-->
+
+        <!-- social -->
+        <aside>
+            <ul class="social">
+                <li>
+                    <a href="https://www.facebook.com/thisishackeryou/" target="_blank">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/hackeryou" target="_blank">
+                        <i class="fab fa-twitter-square"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://ca.linkedin.com/school/hackeryou/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/HackerYou" target="_blank">
+                        <i class="fab fa-github-square"></i>
+                    </a>
+                </li>
+            </ul>
+        </aside><!--end of social-->
+
+        <!-- gallery -->
+        <section>
+            <ul class="gallery">
+                <li class="gallery-item">
+                    <img src="./assets/hat.jpg" alt="Portrait of person in baseball hat, in an urban backdrop.">
+                    <div class="overlay">
+                        <p>Wow</p>
+                    </div>
+                </li>
+                <li class="gallery-item">
+                    <img src="./assets/flowers.jpg" alt="Smiling person with large flowers on their head, against a yellow studio backdrop.">
+                    <div class="overlay">
+                        <p>Nice</p>
+                    </div>
+                </li>
+                <li class="gallery-item">
+                    <img src="./assets/beard.jpg" alt="Calm smile from a person with a beard, outdoors.">
+                    <div class="overlay">
+                        <p>Yes</p>
+                    </div>
+                </li>
+                <li class="gallery-item">
+                    <img src="./assets/red.jpg" alt="Person in wide brim straw hat with freckles and red lipstick, surrounded by leaves.">
+                    <div class="overlay">
+                        <p>Amaze</p>
+                    </div>
+                </li>
+                <li class="gallery-item">
+                    <img src="./assets/eyes.jpg" alt="Legend of Zelda hat wearing person looking to the right, inside a restaurant.">
+                    <div class="overlay">
+                        <p>Love</p>
+                    </div>
+                </li>
+                <li class="gallery-item">
+                    <img src="./assets/glasses.jpg" alt="Rainbow coloured hair person with glasses similing at the camera outdoors.">
+                    <div class="overlay">
+                        <p>Gasp</p>
+                    </div>
+                </li>
+            </ul>
+        </section><!--end of gallery-->
+    </div><!--end of wrapper-->
+</body>
+</html>

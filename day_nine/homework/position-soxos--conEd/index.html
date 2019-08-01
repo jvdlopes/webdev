@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sale Website</title>
+    <!-- load in google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700" rel="stylesheet">
+    <!-- styles -->
+    <style>
+        html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+        
+        .clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+        
+        html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+        
+        *, *:before, *:after {box-sizing: inherit}
+        
+        .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+        /* stripping styles */
+        body,
+        h1,
+        h2,
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-transform: none;
+            color: inherit;
+        }
+
+        /* Display and Positioning */
+        /*
+            There are a few points on this page that need display and positioning to help them look and feel like the answer key.
+
+            1. Large clickable area in the nav link
+            2. Sticky SOXOS header banner
+            3. Corner sale badge on every sale item box
+
+            Open up indexANSWER.html to see the desired behaviour, and scroll down to the specific elements in the CSS to add the CSS needed.
+        */
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            font-size: 16px;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .wrapper {
+            max-width: 900px;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        h1::before,
+        h1::after,
+        h2::before,
+        h2::after {
+            content: " - ";
+            position: relative;
+            top: -2px;
+        }
+
+        /* TODO */
+        /* Sticky SOXOS header banner */
+        h1 {
+            position: relative;
+            font-size: 4rem;
+            text-align: center;
+            font-weight: 300;
+            text-transform: uppercase;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-top: 5px solid white;
+            border-bottom: 5px solid white;
+            padding: 20px 0;
+            color: white;
+            position: sticky;
+            top: 0;
+        }
+
+        h2 {
+            position: relative;
+            font-size: 3.5rem;
+            text-align: center;
+        }
+
+        p {
+            font-size: 2.3rem;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        li {
+            text-align: center;
+        }
+
+        header {
+            background-image: url(./assets/striped-socks.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 550px;
+            padding-top: 200px;
+        }
+
+        nav {
+            background-color: black;
+        }
+
+        /* TODO */
+        /* Crate large clickable area in nav links */
+        a {
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.7rem;
+            font-size: 2rem;
+            padding: 25px 50px;
+            display: inline-block;
+        }
+
+        /* TODO */
+        /* Create a hover and focus state on all anchor tags that turns the background-color to white and the color to black */
+
+
+        main {
+            margin: 150px 0;
+        }
+
+        .sale-items {
+            margin-top: 50px;
+            flex-wrap: nowrap;
+        }
+
+        a:hover,
+        a:focus {
+            background-color: white;
+            color: black;
+        }
+        /* TODO */
+        /* Corner sale badge on every sale item */
+        .sale-items li {
+            border: 5px solid black;
+            padding: 40px 20px;
+            margin: 0 15px;
+            position: relative;
+        }
+
+        .sale-badge {
+            width: 30%;
+            transform: rotate(50deg);
+            position: absolute;
+            right: -15px;
+            top: -15px;
+        }
+
+        .sale-items li:first-child {
+            margin-left: 0;
+        }
+
+        .sale-items li:last-child {
+            margin-right: 0;
+        }
+
+        .img-container {
+            border: 5px solid black;
+        }
+
+        .sox-name {
+            font-size: 2.1rem;
+            font-weight: 700;
+            margin-top: 40px;
+        }
+
+        /* del element represents a range of text that has been deleted from the document. In this case, the full price! */
+        del {
+            text-decoration: line-through;
+            color: #555;
+        }
+
+        /* ins element represents a range of text that has been added to the document. In this case, the new price! */
+        ins {
+            text-decoration: none;
+            position: relative;
+        }
+
+        ins::before,
+        ins::after {
+            content: "+";
+            font-size: 2.1rem;
+            position: absolute;
+            top: 13px;
+        }
+
+        ins::before {
+            left: -50px;
+        }
+
+        ins::after {
+            right: -50px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- nav -->
+    <nav>
+        <!-- wrapper -->
+        <div class="wrapper">
+            <ul>
+                <li><a href="#">+ home +</a></li>
+                <li><a href="#">+ sale +</a></li>
+                <li><a href="#">+ faqs +</a></li>
+            </ul>
+        </div><!--end of wrapper -->
+    </nav><!--end of nav-->
+
+    <!-- header -->
+    <header>
+        <h1>Soxos</h1>
+    </header><!--end of header-->
+
+    <!-- main -->
+    <main>
+        <!-- wrapper     -->
+        <div class="wrapper">
+            <h2>Sale Items</h2>
+            <ul class="sale-items">
+                <li>
+                    <div class="img-container">
+                        <img src="./assets/yellow-socks.jpg" alt="Yellow black and white socks in sandals.">
+                    </div>
+                    <!-- sale badge -->
+                    <div class="sale-badge">
+                        <!-- no alt text just for decoration -->
+                        <img src="./assets/sale-badge.png" alt="">
+                    </div>
+
+                    <p class="sox-name">Yellow Soxos</p>
+                    <del class="full-price"><p>$45.45</p></del>
+                    <ins datetime="2019-04"><p>$30.11</p></ins>
+                </li>
+                <li>
+                    <div class="img-container">
+                        <img src="./assets/red-socks.jpg" alt="Red Soxos in the air.">
+                    </div>
+                    <!-- sale badge -->
+                    <div class="sale-badge">
+                        <!-- no alt text just for decoration -->
+                        <img src="./assets/sale-badge.png" alt="">
+                    </div>
+
+                    <p class="sox-name">Red Soxos</p>
+                    <del class="full-price"><p>$101.32</p></del>
+                    <ins datetime="2019-04"><p>$15.25</p></ins>
+                </li>
+                <li>
+                    <div class="img-container">
+                        <img src="./assets/pink-socks.jpg" alt="Pink Soxos flying out of a car.">
+                    </div>
+                    <!-- sale badge -->
+                    <div class="sale-badge">
+                        <!-- no alt text just for decoration -->
+                        <img src="./assets/sale-badge.png" alt="">
+                    </div>
+
+                    <p class="sox-name">Pink Soxos</p>
+                    <del class="full-price"><p>$56.22</p></del>
+                    <ins datetime="2019-04"><p>$45.50</p></ins>
+                </li>
+            </ul>
+
+        </div><!--end of wrapper-->
+    </main><!--end of main-->
+</body>
+</html>
