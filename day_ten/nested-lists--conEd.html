@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS List Styles</title>
+	<style>
+		html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+		
+		.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+		
+		html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+		
+		*, *:before, *:after {box-sizing: inherit}
+		
+		.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+		body,
+		p {
+			margin: 0;
+			padding: 0;
+		}
+
+		html {
+			font-size: 62.5%;
+		}
+
+		body {
+			font-size: 2.5rem;
+		}
+
+		/* This exercise will help us learn nested Lists. If you need help check out the Lists and Navigation class. */
+		/* Feel free to add a class to the markup if you want to! */
+
+		/* 1. Make the first nested ordered list list-style-type of decimal-leading-zero */
+		/* 2. Adjust the padding of the ordered list nested under list item "Canada Pros" so it's not indented too far right.*/
+		/* 3. Make the background of the main unordered list blue, and make the text white.*/
+		/* 4. Make the background of the sub-lists (nested in the main unordered list) red*/
+
+		.wrapper {
+			margin: 20px auto;
+			max-width: 600px;
+			width: 90%;
+		}
+
+		.canada-pros {
+			list-style-type: decimal-leading-zero;
+			padding-left: 10px;
+		}
+
+		.main-ul {
+			background-color: blue; 
+		}
+
+		.main-ul ol,
+		.sub-li {
+			background-color: red;
+		}
+	</style>
+</head>
+
+<body>
+	<main>
+		<div class="wrapper">
+			<ol>
+				<li>
+					<p>Canada Pros</p>
+					<ol class="canada-pros">
+						<li>
+							<p>Snow</p>
+						</li>
+						<li>
+							<p>Maple Syrup</p>
+						</li>
+						<li>
+							<p>Moose</p>
+						</li>
+					</ol>
+				</li>
+				<li>
+					<p>Canada Cons</p>
+					<ol>
+						<li>
+							<p>Snow</p>
+						</li>
+						<li>
+							<p>Mosquitos</p>
+						</li>
+						<li>
+							<p>Too nice</p>
+						</li>
+					</ol>
+				</li>
+				<li>
+					<p>Canada Facts</p>
+					<ul>
+						<li>
+							<p>Canada's lowest recorded temperature was -63 degrees Celsius in 1947.</p>
+						</li>
+						<li>
+							<p>Canada has more lakes than the rest of the world's lakes combined.</p>
+						</li>
+						<li>
+							<p>Canada has the largest coastline in the world.</p>
+						</li>
+						<li>
+							<p>With 1,896 km, Yonge Street is the longest street in the world.</p>
+						</li>
+					</ul>
+				</li>
+			</ol>
+
+			<ul class="main-ul">
+				<li>
+					<p>Services</p>
+					<ol>
+						<li>
+							<p>Design</p>
+						</li>
+						<li>
+							<p>Web Development</p>
+						</li>
+						<li>
+							<p>Marketing</p>
+						</li>
+					</ol>
+				</li>
+				<li>
+					<p>About us</p>
+					<ul class="sub-li">
+						<li>
+							<p>Our Story</p>
+						</li>
+						<li>
+							<p>Team members</p>
+						</li>
+						<li>
+							<p>Careers</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Contact</p>
+				</li>
+			</ul>
+		</div>
+
+		<ol>
+			<li>
+				<p>Octopus</p>
+			</li>
+			<li>
+				<p>bears</p>
+				<ul>
+					<li>
+						<p>black</p>
+					</li>
+					<li>
+						<p>grizzly</p>
+					</li>
+					<li>
+						<p>polar</p>
+					</li>
+				</ul>
+				<li>
+					<p>cats</p>
+				</li>
+				<li>
+					<p>snakes</p>
+					<ul>
+						<li>
+							<p>python</p>
+						</li>
+						<li>
+							<p>cobra</p>
+						</li>
+						<li>
+							<p>rattle</p>
+						</li>
+					</ul>
+				</li>
+			</li>
+		</ol>
+	</main>
+</body>
+</html>

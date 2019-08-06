@@ -1,0 +1,1 @@
+I needed to use a position for the button in the header, fo it to properly be seen, please put your window to 133% zoom
