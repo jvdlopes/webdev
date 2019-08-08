@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Filters</title>
+    <!-- link google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <!-- link styles -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<!-- Instructions -->
+<!-- 1. Add a drop-shadow with a x-offset and y-offset of 0, a blur-radius of 2px and a colour of #4DB7F3 along with a brightness of 120% on images with the class of heart-icon. Align it with the text to the right of it, as seen in the answer key. -->
+<!-- 2. Add a greyscale of 100% on the image with the class of bowl-of-grains-image. -->
+<!-- 3. Add contrast of 180% on the image with the class of selfie-image. -->
+<!-- 4. Add a brightness of 210% and a contrast of 80% of the image with the class of brown-dog-image. -->
+<!-- 5. Add an opacity filter of 0.65 with a brightness filter of 150% with the class of professional-image -->
+<!-- 6. Add a sepia of 80% to the image with the class of potted-plants-image. Check out how to use sepia by checking out the MDN page about it! -->
+<!-- 7. Give a subtle drop-shadow to the follow button and apply a blur filter on active. The values are up to you! -->
+<!-- 8. Get creative with the remaining images! -->
+
+<!-- Additional Challenge -->
+<!-- Make this page responsive to match the answer key (move the answer key inwards width-wise!) -->
+
+<body>
+    <div class="wrapper">
+        <!-- header -->
+        <header>
+            <div class="profile-pic">
+                <img src="assets/profile-pic.png" alt="Restaurant dishes, profile picture.">
+            </div>
+            <section class="header-text">
+                <div class="name">
+                    <h1>Billy Jean</h1>
+                    <!-- This is a button instead of an anchor tag because this button does something instead of going somewhere. We use a button to DO, and an anchor tag TO GO -->
+                    <button>Follow</button>
+                </div>
+                <ul class="stats">
+                    <li>
+                        <p>74 pictures</p>
+                    </li>
+                    <li class="secondStat">
+                        <p>1204 followers</p>
+                    </li>
+                    <li>
+                        <p>1002 following</p>
+                    </li>
+                </ul>
+            </section>
+        </header>
+        <!--end of header-->
+        <!-- main -->
+        <main>
+            <figure>
+                <img src="assets/image-1.jpg" alt="Colourful bowl of grains and vegetables."
+                    class="bowl-of-grains-image">
+                <figcaption><img src="assets/heart.png" alt="Blue heart" class="heart-icon">My fav salad</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/image-2.jpg" alt="Person taking a selfie in green and rocky field."
+                    class="selfie-image">
+                <figcaption><img src="assets/heart.png" alt="Blue heart" class="heart-icon">A quick selfie</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/image-3.jpg" alt="Happy brown labrador dog, smiling, in motion towards the camera."
+                    class="brown-dog-image">
+                <figcaption><img src="assets/heart.png" alt="Blue heart" class="heart-icon">Hey there Brown Dog!
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="assets/image-4.jpg"
+                    alt="Woman in professional blazer taking a photo of something in the distance."
+                    class="professional-image">
+                <figcaption><img src="assets/heart.png" alt="Blue heart" class="heart-icon">I'll capture it</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/image-5.jpg" alt="Ledge filled with potted plants looking out to apartments."
+                    class="potted-plants-image">
+                <figcaption><img src="assets/heart.png" alt="Blue heart" class="heart-icon">What a view!!</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/image-6.jpg" alt="3 plates of spaghetti with wine." class="pasta-image">
+                <figcaption><img src="assets/heart.png" alt="Blue heart" class="heart-icon">Lunch with friends
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="assets/image-7.jpg" alt="2 cyclists speeding down a sunset highway.">
+                <figcaption><img src="assets/heart.png" alt="Blue heart" class="heart-icon">Marathon prep</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/image-8.jpg" alt="Close up periwinkle hydrangeas.">
+                <figcaption><img src="assets/heart.png" alt="Blue heart" class="heart-icon">Blue my favourite color
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="assets/image-9.jpg" alt="Turquoise ocean water washing up to a plum shore.">
+                <figcaption><img src="assets/heart.png" alt="Blue heart" class="heart-icon">Take me back</figcaption>
+            </figure>
+        </main>
+        <!--end of main-->
+    </div>
+    <!--end of wrapper-->
+</body>
+
+</html>
