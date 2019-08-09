@@ -30,11 +30,11 @@ body {
     align-items: center;
     justify-content: center;
     color: rgb(255, 255, 255);
-    background: linear-gradient(to bottom right, rgb(156, 219, 235), rgb(254,216,127), rgb(156, 219, 235));
+    background: linear-gradient(to bottom right, rgb(156, 219, 235), rgb(254,216,127));
     background-repeat: no-repeat;
     /* change background size & apply animation */
     background-size: 150% 150%;
-    animation: gradient 7s linear infinite;
+    animation: gradient 7s ease infinite;
 }
 
 main {
@@ -76,21 +76,21 @@ i {
 /* Spinning Facebook icon */
 .facebook i:hover {
     /* apply animation */
-
+    animation: spin 2s infinite;
 }
 
 /* ANIMATION 3 */
 /* Wiggling Twitter icon */
 .twitter i:hover {
     /* apply animation */
-
+    animation: wiggle 2s infinite;
 }
 
 /* ANIMATION 4 */
 /* Shaking email icon */
 .email i:hover {
      /* apply animation */
-
+    animation: shake 1s infinite;
 }
 
 /* ANIMATION 5 */
@@ -113,7 +113,7 @@ i {
         background-position: 0% 0%;
     }
     50% {
-        background-position: 80% 80%;
+        background-position: 100% 100%;
     }
     100% {
         background-position: 0% 0%;
@@ -123,7 +123,12 @@ i {
 /* ANIMATION 2 */
 /* Spinning Facebook icon */
 @keyframes spin {
-
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* ANIMATION 3 */
@@ -132,7 +137,18 @@ i {
    Hint: Final product uses 5 points.
 */
 @keyframes wiggle {
-
+    0% {
+        transform: rotate(0deg);
+    }
+    20%, 60% {
+        transform: rotate(-15deg);
+    }
+    40% {
+        transform: rotate(15deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 /* ANIMATION 4 */
@@ -142,7 +158,18 @@ i {
    Hint 2: It's fine if exact pixel and % values are different from the answer key. Every animation is perfect for customization.
 */
 @keyframes shake {
-
+    0% {
+        transform: translateX(0deg);
+    }
+    20%, 60% {
+        transform: translateX(-2px);
+    }
+    40%, 80% {
+        transform: translateX(2px);
+    }
+    100% {
+        transform: translateX(0deg);
+    }
 }
 
 /* ANIMATION 5 */
