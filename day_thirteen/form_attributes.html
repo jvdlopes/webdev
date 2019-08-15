@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Attributes</title>
+    <style>
+        .myForm {
+            width: 600px;
+            display: flex;
+            align-items: center;
+        }
+
+        input[type=checkbox] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border: 1px solid red;
+            height: 12px;
+            width: 12px;
+            display: block;
+            border-radius: 2px;
+            margin: 0 10px;
+        }
+
+        input[type=checkbox]:checked:before {
+            content: '✚';
+            color: #ff5a5f;
+            display: block;
+            font-size: 10px;
+            line-height: 12px;
+            align-self: center;
+        }
+
+        select {
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            appearance: none;
+            border: 1px solid black;
+            background-image: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png);
+            background-repeat: no-repeat;
+            background-position: 95% center;
+            width: 50%;
+            height: 30px;
+        }
+
+        input:valid {
+    background: white;
+    color: black;
+    box-shadow: 3px 3px 5px black;
+}
+
+input:invalid {
+    background: green;
+    border: black;
+    color: white;
+    box-shadow: 3px 3px 5px yellowgreen;
+}
+    </style>
+</head>
+
+<body>
+    <form action="#" method="#" class="myForm" name="myForm">
+        <label for="pinkColor">Pink</label>
+        <input type="checkbox" name="candyColourChoice" id="pinkColor" value="pink">
+
+        <label for="yellowColor">Yellow</label>
+        <input type="checkbox" name="candyColourChoice" value="yellow" id="yellowColor">
+
+        <label for="greenColor">Green</label>
+        <input type="checkbox" name="candyColourChoice" value="green" id="greenColor">
+    </form>
+    <form action="#">
+        <select name="" id="">
+            <option value="">First</option>
+            <option value="">Second</option>
+        </select>
+    </form>
+    <form action="#" method="#" class="myForm" name="myForm">
+            <label for="userName">Username:</label>
+            <input type="text" maxlength="10" minlength="3" required>
+            <button>Submit!</button>
+    </form>
+</body>
+
+</html>

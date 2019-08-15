@@ -31,38 +31,9 @@ body {
 /* end setup */
 /* header */
 header {
-    background-image: url(../assets/main-image-1.jpeg);
+    background-image: linear-gradient(to top right, rgba(173, 216, 230, 0.7), rgba(98, 98, 255, 0.7), rgba(255, 98, 98, 0.7)),url(../assets/image-1.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 50vh;
-}
-
-header img {
-    /* margin-top: 1.5rem;
-    padding-top: 1.5rem; */
-}
-
-.header-flex {
-    display: flex;
-    align-items: center;
-}
-
-/* section 1 */
-.section-1-image {
-    background-image: url(../assets/main-image-2.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 50vh;
-}
-
-.section-2-image {
-    background-image: url(../assets/main-image-3.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 50vh;
-}
-
-.section-flex {
-    display: flex;
-    flex-direction: column;
+    
 }

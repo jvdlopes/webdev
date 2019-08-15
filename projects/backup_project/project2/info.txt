@@ -1,0 +1,11 @@
+Fonts
+Montserrat (Google Fonts)
+Crimson Text(Google Fonts)
+
+Icons
+Font Awesome
+
+Colours
+Yellow #eeb013
+Black #141414
+Light Grey #e4e4e4
