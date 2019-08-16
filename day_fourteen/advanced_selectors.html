@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Advanced Selectors</title>
+    <style>
+        .hippo+.bear {
+            background: palevioletred;
+        }
+
+        .section>p {
+            background: cadetblue;
+        }
+
+        img~p {
+            background: lemonchiffon;
+        }
+
+        .exactExample a[href="http://google.com"] {
+            background: firebrick;
+            padding: 15px;
+            display: inline-block;
+        }
+
+        .exactExample a[href^="https://"] {
+            background: peachpuff;
+        }
+
+        .exactExample a[href$="ca"] {
+            background: darkorange;
+        }
+
+        ul li:not(.number5) {
+            background: mediumorchid;
+        }
+
+        section p:nth-of-type(2n) {
+            color: red;
+        }
+
+        input[type="checkbox"]:checked + .clickMe {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hippo">hippo</div>
+    <div class="bear">bear</div>
+    <div class="bear">bear</div>
+
+    <div class="section">
+        <p>hi</p>
+        <p>hello</p>
+        <div>
+            <p>bear</p>
+        </div>
+        <p>bonjour</p>
+    </div>
+
+    <p>blue</p>
+    <p>yellow</p>
+    <p>pink</p>
+    <img src="https://www.placecage.com/c/200/300" alt="#">
+    <p>bear</p>
+    <p>olives</p>
+    <p>cup</p>
+
+    <div class="exactExample">
+        <a href="http://google.com">Google</a>
+        <a href="http://www.google.com">Google (with www)</a>
+        <a href="http://mozilla.com">Mozilla</a>
+    </div>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li class="number5">5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+    </ul>
+
+    <section>
+        <h3>title</h3>
+        <p>word 1</p>
+        <p>word 2</p>
+        <p>word 3</p>
+    </section>
+
+    <input type="checkbox">
+    <div class="clickMe">Click me</div>
+</body>
+
+</html>
