@@ -1,0 +1,52 @@
+// variables
+$primaryColour: #e6ff00;
+$primaryLight: lighten($primaryColour, 25);
+$primaryDark: darken($primaryColour, 10);
+
+$secondaryColour: #1c1a1a;
+
+$primaryTextColour: #ffffff;
+
+$primaryFlourishColour: #d007ed;
+$secondaryFlourishColour: #eb2974;
+
+// mixins
+// fontSize(sizeValue);
+@mixin fontSize($sizeValue){
+	font-size: $sizeValue * 1px;
+	font-size: ($sizeValue/10) * 1rem;
+}
+
+// sectionHeader(color);
+@mixin sectionHeader($color) {
+	color: $color;
+	@include fontSize(35);
+	letter-spacing: 3px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+// flourish();
+@mixin flourish() {
+	text-align: center;
+	margin-bottom: 20px;
+
+	span {
+		display: inline-block;
+		height: 5px;
+	}
+
+	.center {
+		width: 50px;
+		background: $primaryFlourishColour;
+		margin: 0 5px;
+	}
+
+	.right,
+	.left {
+		width: 10px;
+		background: $secondaryFlourishColour;
+	}
+
+}

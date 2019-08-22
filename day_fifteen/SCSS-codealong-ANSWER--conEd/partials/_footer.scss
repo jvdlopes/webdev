@@ -1,0 +1,19 @@
+footer {
+    background-color: $primaryLight;
+
+    h3 {
+        @include sectionHeader($secondaryColour);
+    }
+
+    address {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+
+        a,
+        p {
+            margin: 10px;
+        }
+    }
+}

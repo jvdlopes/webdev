@@ -1,0 +1,36 @@
+.locations {
+    background-color: $secondaryColour;
+    color: $primaryTextColour;
+    padding-top: 100px;
+
+    h3 {
+        @include sectionHeader($primaryTextColour);
+    }
+
+    .gallery {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+
+        &-item {
+            width: 300px;
+            margin: 10px 20px;
+            text-align: center;
+
+            figure {
+
+                img {
+                    border: 10px solid $primaryFlourishColour;
+                }
+
+                figcaption {
+                    margin: 20px 0;
+                    @include fontSize(20);
+                    text-transform: uppercase;
+                }
+            }
+
+        }
+    }
+}

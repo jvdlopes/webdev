@@ -1,0 +1,38 @@
+header {
+    height: calc(100vh - 70px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: fixed;
+    // @include flexCenter;
+
+        h1 {
+            color: red;
+        }
+
+        .bubble {
+            height: 70%;
+        }
+
+        div {
+            // @include flexCenter;
+            flex-direction: column;
+        }
+
+        h1, 
+        h2 {
+            margin: 0;
+        }
+
+        h1 {
+            @include fontSize(50);
+            text-transform: capitalize;
+        }
+
+        h2 {
+            @include fontSize(35);
+            text-transform: lowercase;
+        }
+}
+
+
+

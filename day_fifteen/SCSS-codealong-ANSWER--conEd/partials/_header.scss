@@ -1,0 +1,27 @@
+header {
+    background-image: linear-gradient(120deg,
+        $primaryLight 50%,
+        $primaryDark 50%);
+    padding: 100px 0;
+
+    .header-text {
+        background-color: $secondaryColour;
+        padding: 20px 10px 5px 40px;
+        color: $primaryTextColour;
+        box-shadow: 20px 20px 0 $secondaryColour;
+        max-width: 600px;
+    }
+
+    h1 {
+        @include fontSize(30);
+        letter-spacing: 6px;
+    }
+
+    h2 {
+        @include fontSize(60);
+        letter-spacing: 8px;
+        text-transform: uppercase;
+        margin: 20px 0;
+    }
+}
+

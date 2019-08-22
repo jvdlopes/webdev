@@ -1,0 +1,17 @@
+SCSS code along specs
+
+Font family:
+- Kanit, available on Google Fonts, in the weights 300 and 600. The buttons have a font-weight of 600 while the base font weight is 300.
+
+Colors:
+- Primary Text colour: #fff (used on all white text)
+
+- The primary green colour is #e6ff00;
+- The lighter green of the gradient in the header is 25% lighter than the primary green colour.
+- The darker green of the gradient, as well as the box shadow behind the image in the Ventures section is 10% darker than the primary green colour. 
+
+- The primary black colour used on some text as well as the box shadow in the header: #1c1a1a 
+
+- The purple used as a border around the images in the locations section, along with the center span in the decorative underlines: #d007ed
+
+- The red colour on the outer spans in the decoration underline: #eb2974
