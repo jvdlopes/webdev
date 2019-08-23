@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<title>Ham Fun</title>
+</head>
+
+<body>
+	<header>
+		<div class="wrapper headerStyles">
+			<h1>Canoe Shop</h1>
+
+			<button class="hamburger"><i class="fas fa-bars"></i>
+				<p class="sr-only">Click here to open up hamburger menu</p>
+			</button>
+			<nav class="menu">
+				<div class="fullScreen">
+					<button class="exit-responsive">
+						<i class="fas fa-times"></i>
+						<p class="sr-only">Click me to close the navigation.</p>
+					</button>
+					<ul>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Tours</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+	<!-- Load in jQuery -->
+	<script src='https://code.jquery.com/jquery-3.4.0.min.js'
+		integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+	<script>
+		$(function() {
+			$('.hamburger').click(function() {
+				$('.menu').toggleClass('show');
+			});
+
+			$('.exit-responsive').click(function() {
+				$('.menu').toggleClass('show');
+			});
+
+		});
+		// write a document ready
+		// write a function that listens to a click on the hamburger menu
+		// toggle class show on the menu
+		// write a function that listens to a click on the exit icon
+		// toggle class show on the menu
+	</script>
+</body>
+
+</html>

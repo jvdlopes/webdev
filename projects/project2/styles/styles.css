@@ -21,9 +21,9 @@ html {
 }
 
 .big-wrapper {
-    max-width: 700px;
-    width: 95%;
+    max-width: 1000px;
     margin: 0 auto;
+    width: 97%;
 }
 
 img {
@@ -33,6 +33,17 @@ img {
 
 body {
     font-size:1.6rem;
+}
+section {
+    margin: 50px auto;
+}
+
+header {
+    margin-bottom: 25px;
+}
+
+footer {
+    margin-top: 25px;
 }
 /* end setup */
 /* header */
@@ -206,21 +217,91 @@ section button {
 footer {
     background-color: #141414;
     color: white;
-}
-
-footer li {
     text-align: left;
-}
-
-.times {
-    text-align: right;
-    color: red;
 }
 
 .footer-flex {
     display: flex;
+    justify-content: space-between;
 }
 
 footer li {
     list-style: none;
+    color: #e4e4e4;
+}
+
+
+footer p {
+    color: dimgray;
+    font-size: 1.4rem;
+}
+
+footer h3 {
+    font-size: 1.5rem;
+    color: dimgray;
+}
+
+footer h4 {
+    font-size: 0.8rem;
+    color: dimgray;
+}
+
+.light-text {
+    color: #e4e4e4;
+}
+.white-text {
+    color: white;
+}
+
+.footer-section1 {
+    margin-right: 5px;
+    width: calc(40% - 20px);
+}
+
+.footer-section2 {
+    margin: auto 5px;
+    width: calc(30% - 20px);
+}
+
+.footer-section3 {
+    margin-left: 5px;
+    width: calc(30% - 20px);
+}
+
+.footer-flex2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-flex3 {
+    display: flex;
+    align-items: center;
+}
+
+.footer-flex3 i {
+    width: 20%;
+}
+
+.footer-flex3 h3 {
+    width: 80%;
+    font-size: 1rem;
+}
+
+.footer-flex3 p {
+    width: 80%;
+}
+
+.dim {
+    COLOR: dimgray;
+}
+
+.footer-flex4 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 0;
 }

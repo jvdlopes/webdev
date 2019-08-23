@@ -1,0 +1,75 @@
+html {
+	font-size: 125%;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+body {
+	background: #8cba80;
+}
+
+h1 {
+	margin-bottom: 0;
+	font-size: 3rem;
+	font-weight: 700;
+}
+
+h2 {
+	margin-top: 10px;
+	font-size: 1.8rem;
+	font-weight: 400;
+}
+
+h1,
+h2 {
+	text-align: center;
+}
+
+.toDoList {
+	display: flex;
+	justify-content: center;
+}
+
+ul {
+	background: white;
+	padding: 50px 50px 50px 75px;
+	font-size: 1.2rem;
+	font-weight: 300;
+	list-style: none;
+	border: 2px solid black;
+	box-shadow: -5px 5px 2px 0;
+}
+
+li {
+	position: relative;
+	line-height: 1.65;
+	/* creates a custom cursor when hovering over the li's */
+	cursor: pointer;	
+}
+
+li:before {
+	content: "";
+	position: absolute;
+	bottom: 10px;
+	left: -30px;
+	width: 0;
+	height: 0;
+	/* these borders create the triangle shape of the initial before element */
+	border-top: 10px solid transparent;
+	border-left: 20px solid #4d5382;
+	border-bottom: 10px solid transparent;
+}
+
+.checked:before {
+	/* /2713 is the Unicode for a checkmark */
+	content:  "\2713 ";
+	bottom: 40px;
+	left: -30px;
+	width: 0;
+	height: 0;
+	border: none;
+}
